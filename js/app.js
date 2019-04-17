@@ -21,13 +21,17 @@
 //Test API query...
 
 // var searchTerm = from HTML
-// var numRec = HTML element, use .val()
+// var numRec = HTML element, not sure how to call this from the API documentation
 // var startYear =  HTML element, use .val(), format yyyymmdd
 // var endYear = HTML element, use .val() yyyymmdd
-// var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ searchTerm + "&begin_date=" + startYear + "&end_date=" + endYear" + &api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
 
-var queryURL =
-    "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=nasa&begin_date=20190101&end_date=20190416&page=5&api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
+var searchTerm = "NASA";
+var startYear = 20180101;
+var endYear = 20181231;
+
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&begin_date=" + startYear + "&end_date=" + endYear + "&api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
+
+// var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=nasa&begin_date=20190101&end_date=20190416&page=5&api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
 
 $.ajax({
     url: queryURL,
@@ -36,7 +40,6 @@ $.ajax({
 
     //response as object
     console.log(response);
-    // $('#button-call').text(JSON.stringify(response))
     //response as string
     console.log(JSON.stringify(response));
 });
