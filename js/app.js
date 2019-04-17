@@ -21,16 +21,22 @@
 //Test API query...
 
 // var searchTerm = from HTML
-// "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=searchTerm&api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
+// var numRec = HTML element, use .val()
+// var startYear =  HTML element, use .val(), format yyyymmdd
+// var endYear = HTML element, use .val() yyyymmdd
+// var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+ searchTerm + "&begin_date=" + startYear + "&end_date=" + endYear" + &api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
 
 var queryURL =
-    "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=art&api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
+    "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=nasa&begin_date=20190101&end_date=20190416&page=5&api-key=HMTk2zDKnB1SFeZTIe1IExOSVvndDeac";
 
 $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function (response) {
 
-    console.log(response)
+    //response as object
+    console.log(response);
     // $('#button-call').text(JSON.stringify(response))
+    //response as string
+    console.log(JSON.stringify(response));
 });
