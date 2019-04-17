@@ -41,5 +41,8 @@ $.ajax({
     //response as object
     console.log(response);
     //response as string
-    console.log(JSON.stringify(response));
+    // console.log(JSON.stringify(response));
+
+    console.log(response.docs[9])
 });
+
