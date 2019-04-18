@@ -3,6 +3,83 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Assignment</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+
+<body>
+
+    <!-- Main Bootstrap Search -->
+    <div class="container">
+
+        <!-- Jumbotron for Title -->
+        <div class="jumbotron" style="background-color: #20315A ; color: white;">
+            <h1 class="text-center">
+                <strong>
+                    <i class="newspaper"></i> New York Times Search</strong>
+            </h1>
+        </div>
+
+        <!-- Row for Searching New York Times -->
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+                <!--search parameters -->
+                <div class="card">
+                    <div class="card-header">
+                        <strong>
+                            <i class="fa-list"></i> Search Parameters</strong>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- HTML Form-->
+                        <form role="form">
+
+                            <!-- text box-->
+                            <div class="form-group">
+                                <label for="search">Search Term:</label>
+                                <input type="text" class="form-control" id="search-term">
+                            </div>
+
+                            <!-- number of records that the user wants to retrieve  -->
+                            <div class="form-group">
+                                <label for="pwd">Number of Records to Retrieve:</label>
+                                <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                    <option selected value="1">1</option>
+                                    <!-- 5 as default -->
+                                    <option value="5" selected>5</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+
+                            <!--  Start Year Parameter-->
+                            <div class="form-group">
+                                <label for="start-year">Start Year (Optional):</label>
+                                <input type="text" class="form-control" id="start-year">
+                            </div>
+
+                            <!--  End Year Parameter -->
+                            <div class="form-group">
+                                <label for="end-year">End Year (Optional):</label>
+                                <input type="text" class="form-control" id="end-year">
+                            </div>
+
+                            <!-- final submit button -->
+                            <button type="submit" class="btn btn-default" id="run-search">
+                                <i class="fa fa-search"></i> Search</button>
+                            <button class="btn btn-default" id="clear-all">
+                                <i class="fa fa-trash"></i> Clear Results</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+=======
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
